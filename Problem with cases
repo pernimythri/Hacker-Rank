@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    String Method(String s)
+    {
+        int u=0,l=0;
+        char[] ch=s.toCharArray();
+        for(char i : ch)
+        {
+            if(Character.isUpperCase(i))
+                u+=1;
+            else
+                l+=1;
+        }
+        if(s.length()==u)
+            return s;
+        else if(s.length()==l)
+            return s;
+        else
+        {
+            if(l<u)
+                return s.toUpperCase();
+            else
+                return s.toLowerCase();
+        }
+    
+    }
+
+    public static void main(String[] args) {
+        Solution obj=new Solution();
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        System.out.println(obj.Method(s));
+        
+    }
+}
