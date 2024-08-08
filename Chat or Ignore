@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    String Method(String s)
+    {
+        
+        char[] ch=s.toCharArray();
+        Set<Character>set=new HashSet<>();
+        for(char i : ch)
+        {
+            set.add(i);
+            
+            
+        }
+        
+        int len=set.size();
+        if(len%2==0)
+            return "CHAT WITH HER!";
+        else
+            return "IGNORE HIM!";
+    }
+
+    public static void main(String[] args) {
+        Solution obj=new Solution();
+       Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        System.out.println(obj.Method(s));
+    }
+}
